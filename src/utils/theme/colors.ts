@@ -1,0 +1,31 @@
+const SUN_FLOWER = '#FF5714';
+const EMERALD = '#2ecc71';
+const ALIZARIN = '#e74c3c';
+const WHITE = '#ffffff';
+const GRAY_BACKGROUND = '#F2F2F2';
+const GRAY_BORDER = '#F9F9F9';
+const PRIMARY_BLUE = '#39A2DB';
+const TEAL = '#227C70';
+const GRAY = '#d3d3d3';
+const BLACK = '#000000';
+const YELLOW = '#FFFF00';
+const BLUE = '#00008B';
+
+const common = {
+  PRIMARY: '#38A7F0',
+  SECONDARY: '#434D59',
+  SUCCESS: EMERALD,
+  ERROR: ALIZARIN,
+  WHITE: WHITE,
+  BLUE: BLUE,
+  GRAY_BACKGROUND: GRAY_BACKGROUND,
+  GRAY_BORDER: GRAY_BORDER,
+  PRIMARY_BLUE: PRIMARY_BLUE,
+  TEAL: TEAL,
+  GRAY: GRAY,
+  BLACK: BLACK,
+  SUN_FLOWER: SUN_FLOWER,
+  YELLOW: YELLOW,
+};
+
+export const colors = {...common};
