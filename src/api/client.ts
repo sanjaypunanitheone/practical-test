@@ -102,7 +102,7 @@ request.interceptors.response.use(
     throw error;
   },
 );
-export function setHeaderToken(token: any) {
+export function setHeaderToken(token: string) {
   if (token) {
     request.defaults.headers.Authorization = `Bearer ${token}`;
   } else {

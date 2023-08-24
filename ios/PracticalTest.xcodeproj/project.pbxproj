@@ -43,6 +43,10 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-PracticalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PracticalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PracticalTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PracticalTest-PracticalTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticalTest-PracticalTestTests.release.xcconfig"; path = "Target Support Files/Pods-PracticalTest-PracticalTestTests/Pods-PracticalTest-PracticalTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		93794D5B2A97253F00EBA5E0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		93794D5D2A9725AF00EBA5E0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		93794D602A972A5100EBA5E0 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		93794D622A972AD500EBA5E0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		13B07FAE1A68108700A75B9A /* PracticalTest */ = {
 			isa = PBXGroup;
 			children = (
+				93794D5F2A97265500EBA5E0 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -116,6 +121,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				93794D5D2A9725AF00EBA5E0 /* SimpleLineIcons.ttf */,
+				93794D5B2A97253F00EBA5E0 /* FontAwesome.ttf */,
 				13B07FAE1A68108700A75B9A /* PracticalTest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PracticalTestTests */,
@@ -135,6 +142,15 @@
 				00E356EE1AD99517003FC87E /* PracticalTestTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		93794D5F2A97265500EBA5E0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				93794D622A972AD500EBA5E0 /* SimpleLineIcons.ttf */,
+				93794D602A972A5100EBA5E0 /* Ionicons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {

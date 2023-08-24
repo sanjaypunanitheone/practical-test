@@ -67,4 +67,45 @@ export type UserTypes = {
     thumbnail: string;
   };
   nat: string;
+  uniqueId: string | undefined;
+};
+
+export type PageInfo = {
+  page: number;
+  results: number;
+};
+
+export type UserListState = {
+  userList: UserTypes[];
+  pageInfo: PageInfo;
+};
+export interface UserLocationProps {
+  street: {
+    number: number;
+    name: string;
+  };
+  city: string;
+  state: string;
+  country: string;
+  postcode: string;
+  coordinates: {
+    latitude: string;
+    longitude: string;
+  };
+  timezone: {
+    offset: string;
+    description: string;
+  };
+}
+export type RootStateResponseProps = {
+  users: {
+    userList: UserTypes[];
+    pageInfo: {
+      page: number;
+      results: number;
+      seed: string;
+      version: string;
+    };
+  };
+  favoriteUser: {favoriteUsers: UserTypes[]};
 };

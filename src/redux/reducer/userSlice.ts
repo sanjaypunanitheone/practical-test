@@ -1,21 +1,29 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {api} from '../../api';
+import {UserListState} from '../../utils/constant';
 
 type UsersParams = {
   results: number;
   page: number;
 };
+interface UsersState {
+  users: {
+    pageInfo: UsersParams;
+  };
+}
 
 export const fetchUsers = createAsyncThunk(
   'auth/fetchUsers',
   async (_, {getState}) => {
     try {
-      const currentPageInfo = getState()?.users?.pageInfo;
+      const currentState = getState() as UsersState;
+      const currentPageInfo = currentState.users.pageInfo;
       const param: UsersParams = {
         results: currentPageInfo.results,
         page: currentPageInfo.page + 1,
       };
       let response = await api.users.get(param);
+
       return response.data;
     } catch (error) {}
   },
@@ -35,29 +43,32 @@ export const refreshUserList = createAsyncThunk(
   },
 ) as any;
 
-const initialState = {
+const initialState: UserListState = {
   userList: [],
   pageInfo: {
     page: 0,
     results: 10,
   },
-} as any;
+};
 
 export const userSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(fetchUsers.fulfilled, (state: any, action) => {
+    builder.addCase(fetchUsers.fulfilled, (state: UserListState, action) => {
       state.userList = [...state.userList, ...action.payload?.results];
       state.pageInfo = action.payload?.info;
     });
 
-    builder.addCase(refreshUserList.fulfilled, (state: any, action) => {
-      state.userList = action.payload?.results;
-      state.pageInfo = action.payload?.info;
-    });
+    builder.addCase(
+      refreshUserList.fulfilled,
+      (state: UserListState, action) => {
+        state.userList = action.payload?.results;
+        state.pageInfo = action.payload?.info;
+      },
+    );
   },
 });
-// export const {increment, decrement, incrementByAmount} = userSlice.actions;
+
 export default userSlice.reducer;
